@@ -43,5 +43,12 @@ while game_is_on:
     elif ball.xcor() < -380:
         r_scoreboard.update_score()
         ball.reset_position()
+        
+    if r_scoreboard.score == 10:
+        ball.reset_position()
+        game_is_on = False
+    if l_scoreboard.score == 10:
+        ball.reset_position()
+        game_is_on = False
 
 screen.exitonclick()
